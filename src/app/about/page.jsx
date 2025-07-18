@@ -20,9 +20,11 @@ const AboutPage = () => {
     <div>
       <h1 className="text-3xl font-bold">About Us</h1>
       <p>This is the about page of our awesome Next.js app!</p>
-      <Link href="/about/address" className="mr-4">
-        <button className="btn btn-primary">Address</button>
-      </Link>
+      <p>
+        <Link href="/about/address" className="mr-4 btn btn-primary my-4">
+          Address
+        </Link>
+      </p>
       <button
         type="button"
         onClick={handleNavigation}

@@ -1,7 +1,6 @@
-import Link from "next/link";
 import React from "react";
 
-const ServicesPage = () => {
+const ServiceDetails = ({ params }) => {
   const data = [
     {
       _id: "1a2b3c4d5e6f",
@@ -34,24 +33,22 @@ const ServicesPage = () => {
         "Promoting businesses through social media, email campaigns, and ads.",
     },
   ];
-
+  const { id } = params;
+  const singleData = data.find((service) => service._id === id);
   return (
     <div>
-      <h1 className="text-3xl font-bold">Our Services</h1>
-      <p>We offer a variety of services to help you succeed.</p>
-      <ul className="list-disc pl-5">
-        {data.map((service) => (
-          <li key={service._id} className="my-2">
-            <h2 className="text-xl font-semibold">{service.service_name}</h2>
-            <p>{service.service_description}</p>
-            <Link href={`/services/${service._id}`} className="text-blue-500">
-              View Details
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1 className="text-2xl font-bold">Service Details</h1>
+      <p>Service ID: {singleData ? singleData._id : "Not found"}</p>
+      {singleData ? (
+        <div>
+          <h2 className="text-xl font-semibold">{singleData.service_name}</h2>
+          <p>{singleData.service_description}</p>
+        </div>
+      ) : (
+        <p>Service not found.</p>
+      )}
     </div>
   );
 };
 
-export default ServicesPage;
+export default ServiceDetails;
