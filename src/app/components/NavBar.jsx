@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
@@ -5,9 +6,18 @@ const NavBar = () => {
     <header className="bg-gray-800 text-white p-4">
       <nav className="container mx-auto flex justify-between items-center">
         <ul className="flex space-x-4">
-          <li>Home</li>
-          <li>Services</li>
-          <li>About</li>
+          <Link href="/">
+            <li className="hover:underline">Home</li>
+          </Link>
+          <Link href="/services">
+            <li className="hover:underline">Services</li>
+          </Link>
+          <Link href="/about">
+            <li className="hover:underline">About</li>
+          </Link>
+          <Link href="/contact">
+            <li className="hover:underline">Contact Us</li>
+          </Link>
         </ul>
       </nav>
     </header>
