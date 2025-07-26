@@ -24,6 +24,9 @@ const NavBar = () => {
           <Link href="/contact">
             <li className="hover:underline">Contact Us</li>
           </Link>
+          <Link href="/login">
+            <li className="hover:underline">Login</li>
+          </Link>
         </ul>
       </nav>
     </header>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const DashboardLayout = ({ children }) => {
@@ -22,14 +23,14 @@ const DashboardLayout = ({ children }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu bg-gray-900 text-white min-h-full w-80 p-4">
+        <ul className="menu bg-gray-900 text-white min-h-full w-80 p-4 space-y-4">
           {/* Sidebar content here */}
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
+          <Link href="/user-dashboard">
+            <li>User Dashboard</li>
+          </Link>
+          <Link href="/admin-dashboard">
+            <li>Admin Dashboard</li>
+          </Link>
         </ul>
       </div>
     </div>
