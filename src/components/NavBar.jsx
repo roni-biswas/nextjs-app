@@ -15,6 +15,9 @@ const NavBar = () => {
           <Link href="/">
             <li className="hover:underline">Home</li>
           </Link>
+          <Link href="/posts">
+            <li className="hover:underline">Posts</li>
+          </Link>
           <Link href="/services">
             <li className="hover:underline">Services</li>
           </Link>
