@@ -1,5 +1,10 @@
 import MealsSearchInputs from "./components/MealsSearchInputs";
 
+export const metadata = {
+  title: "Meals", // Title for the meals page
+  description: "Explore a variety of meals and recipes.", // Description for the meals page
+};
+
 const MealsPage = async ({ searchParams }) => {
   const search = searchParams.search || "";
 

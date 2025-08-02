@@ -9,6 +9,22 @@ export const postsData = async (post_id) => {
   return data;
 };
 
+export async function generateMetadata({ params }) {
+  const slug = (await params).id;
+
+  // fetch post information
+  const post = await postsData(slug);
+
+  if (!post) {
+    return {};
+  }
+
+  return {
+    title: post.title,
+    description: post.body,
+  };
+}
+
 const PostDetails = async ({ params }) => {
   const { id } = params;
   const post = await postsData(id);

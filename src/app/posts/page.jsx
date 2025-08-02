@@ -1,4 +1,5 @@
 import Link from "next/link";
+import style from "./post.module.css";
 
 export const getPosts = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -20,7 +21,9 @@ const Posts = async () => {
             className="p-4 border rounded-lg shadow-md h-78 flex flex-col"
           >
             <p>{post.id}</p>
-            <p className="text-xl font-bold">{post.title}</p>
+            <p className={`text-xl font-bold ${style["text-title"]}`}>
+              {post.title}
+            </p>
             <p>{post.body}</p>
 
             {/* Spacer and button aligned bottom right */}
