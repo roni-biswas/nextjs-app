@@ -27,6 +27,9 @@ const NavBar = () => {
           <Link href="/contact">
             <li className="hover:underline">Contact Us</li>
           </Link>
+          <Link href="/meals">
+            <li className="hover:underline">Meals</li>
+          </Link>
           <Link href="/login">
             <li className="hover:underline">Login</li>
           </Link>
